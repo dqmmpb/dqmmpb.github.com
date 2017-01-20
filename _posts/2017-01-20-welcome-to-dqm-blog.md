@@ -60,6 +60,7 @@ $ npm install --save-dev gulp-css-spriter
 参照[gulp-css-spriter][gulp-css-spriter]的[Usage][gulp-css-spriter-usage]来就是了。
 
 因为是回顾CSS知识点，就尝试使用animation来实现Loading的...效果，以下为less代码：
+
 ```less
 .loading {
   p {
@@ -95,6 +96,7 @@ $ npm install --save-dev gulp-css-spriter
 参考[移动web动画设计的一点心得——css3实现跑步][animation]，我也实践了CSS3的Animation。
 这里出于对雪碧图的尝试，将原有的背景图拆成7张，使用[gulp-css-spriter][gulp-css-spriter]进行合并。
 于是。。。 问题就来了，先看代码：
+
 ```less
 #good-morning {
 
@@ -135,7 +137,9 @@ $ npm install --save-dev gulp-css-spriter
   }
 }
 ```
+
 这里通过循环，将背景图片放到了`keyframes`里，于是。。。[gulp-css-spriter][gulp-css-spriter]居然没有将`keyframes`中的background-image合并过去，也没有替换其中的文件。
+
 ```less
 @keyframes good-morning {
   0% {
@@ -164,17 +168,21 @@ $ npm install --save-dev gulp-css-spriter
   }
 }
 ```
+
 一脸懵逼，囧rz。。。
 
 于是硬着头皮翻源码，[gulp-css-spriter][gulp-css-spriter]使用[css][css]插件来处理css文件
+
 ```javascript
 var styles = css.parse(String(resultantFile.contents), {
     'silent': isSilent,
     'source': vinylFile.path
 });
 ```
+
 通过`css.parse`方法获取css中的所有Node，详细的css节点信息请参看[css][css]中的Common properties。
 [gulp-css-spriter][gulp-css-spriter]根据解析的Node种的rules，在`map-over-styles-and-transform-background-image-declarations.js`中调用
+
 ```javascript
 // Go over each background `url()` declarations
 transformedStyles.stylesheet.rules.map(function(rule, ruleIndex) {
@@ -209,7 +217,9 @@ transformedStyles.stylesheet.rules.map(function(rule, ruleIndex) {
     return rule;
 });
 ```
+
 这里只是对rule.type为rule的节点进行了处理，并没有对rule.type为keyframes的节点进行处理，于是将改js修改如下：
+
 ```javascript
 // Go over each background `url()` declarations
 transformedStyles.stylesheet.rules.map(function(rule, ruleIndex) {
@@ -275,6 +285,7 @@ transformedStyles.stylesheet.rules.map(function(rule, ruleIndex) {
     return rule;
 });
 ```
+
 添加对keyframes的解析，keyframes包含keyframe，keyframe包含declarations。
 于是fork了源码，修改后，将该issue提交给插件作者[issue6][issue6]，问题解决。
 这里漏了个test测试没有写，过几天补上，囧rz。。。
