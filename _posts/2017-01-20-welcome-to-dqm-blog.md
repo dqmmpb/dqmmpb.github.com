@@ -96,8 +96,7 @@ $ npm install --save-dev gulp-css-spriter
 参考[移动web动画设计的一点心得——css3实现跑步][animation]，我也实践了CSS3的Animation。
 这里出于对雪碧图的尝试，将原有的背景图拆成7张，使用[gulp-css-spriter][gulp-css-spriter]进行合并。
 于是。。。 问题就来了，先看代码：
-
-```less
+```git
 #good-morning {
 
   @student-width: 180px;
@@ -140,7 +139,7 @@ $ npm install --save-dev gulp-css-spriter
 
 这里通过循环，将背景图片放到了`keyframes`里，于是。。。[gulp-css-spriter][gulp-css-spriter]居然没有将`keyframes`中的background-image合并过去，也没有替换其中的文件。
 
-```less
+```git
 @keyframes good-morning {
   0% {
     background-image: url("../../images/animation/a1.png");
