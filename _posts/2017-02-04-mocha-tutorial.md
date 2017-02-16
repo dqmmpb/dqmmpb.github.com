@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "测试框架Mocha实例"
-date:  2017-01-21 14:06:00 +0800
+title:  "测试框架Mocha实例"
+date:   2017-01-21 14:06:00 +0800
 categories: jekyll update
 ---
 
