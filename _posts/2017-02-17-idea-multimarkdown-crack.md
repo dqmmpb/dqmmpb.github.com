@@ -10,7 +10,7 @@ categories: jekyll update
 ### 安装
 
 先安装`idea-multimarkdown`插件
-再在`$HOME/.IntelliJIdea2016.2/config/plugins/idea-multimarkdown/`目录下找到插件的`idea-multimarkdown.jar`文件
+再在`$HOME/.IntelliJIdea2016.2/config/plugins/idea-multimarkdown/lib`目录下找到插件的`idea-multimarkdown.jar`文件
 
 安装和破解过程参考[IntelliJ IDEA Multi-MarkDown插件安装破J全过程][idea-multimarkdown]
 
@@ -63,7 +63,7 @@ jar uvf idea-multimarkdown.jar com/vladsch/idea/multimarkdown/license/LicenseAge
 jar uvf idea-multimarkdown.jar com/vladsch/idea/multimarkdown/license/LicenseAgent.class
 ```
 
-用破解后的`idea-multimarkdown.jar`文件替换原(`$HOME/.IntelliJIdea2016.2/config/plugins/idea-multimarkdown/`文件夹下的)`idea-multimarkdown.jar`
+用破解后的`idea-multimarkdown.jar`文件替换原(`$HOME/.IntelliJIdea2016.2/config/plugins/idea-multimarkdown/lib`文件夹下的)`idea-multimarkdown.jar`
 
 重启idea，大功告成
 
