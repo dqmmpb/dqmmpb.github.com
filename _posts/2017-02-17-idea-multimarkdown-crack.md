@@ -70,6 +70,8 @@ jar uvf idea-multimarkdown.jar com/vladsch/idea/multimarkdown/license/LicenseAge
 ![idea-multimarkdown-screenshot][idea-multimarkdown-screenshot]
 
 
+ps: 本来想通过源码编译的，但源码是1.2.3版本的，已经比较旧了，源码可参看我自己fork的分支[idea-multimarkdown-github-dqmmpb][idea-multimarkdown-github-dqmmpb]
+
 ### Ubuntu下截屏工具Shutter安装
 ```
 sudo add-apt-repository ppa:shutter/ppa
@@ -79,6 +81,7 @@ sudo apt-get install shutter
 
 [idea-multimarkdown]: http://www.jianshu.com/p/a0550f81cbd1
 [idea-multimarkdown-github]: https://github.com/vsch/idea-multimarkdown
+[idea-multimarkdown-github-dqmmpb]: https://github.com/dqmmpb/idea-multimarkdown
 [idea-multimarkdown-screenshot]: http://ok2471oek.bkt.clouddn.com/dqmmpb/blog/2017-02-17/idea-multimarkdown.png
 [idea-multimarkdown-modules]: http://ok2471oek.bkt.clouddn.com/dqmmpb/blog/2017-01-20/idea-multimarkdown-modules.png
 [idea-multimarkdown-lib1]: http://ok2471oek.bkt.clouddn.com/dqmmpb/blog/2017-01-20/idea-multimarkdown-lib1.png
