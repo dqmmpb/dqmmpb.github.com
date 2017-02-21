@@ -386,6 +386,13 @@ service apache2 restart
 
 ![apache2-php-idea-13][apache2-php-idea-13]
 
+
+### 参考
+
+- [IntelliJ Idea官方php环境配置][intellij-idea-php]
+- [xdebug官网安装文档][xdebug-install]
+- [PHP7来了，教你如何配置Xdebug和Homestead环境][thx-php7]
+
 [apache2-php-idea-1]: http://ok2471oek.bkt.clouddn.com/dqmmpb/blog/2017-02-21/apache2-php7-idea-1.png
 [apache2-php-idea-2]: http://ok2471oek.bkt.clouddn.com/dqmmpb/blog/2017-02-21/apache2-php7-idea-2.png
 [apache2-php-idea-3]: http://ok2471oek.bkt.clouddn.com/dqmmpb/blog/2017-02-21/apache2-php7-idea-3.png
@@ -399,4 +406,6 @@ service apache2 restart
 [apache2-php-idea-11]: http://ok2471oek.bkt.clouddn.com/dqmmpb/blog/2017-02-21/apache2-php7-idea-11.png
 [apache2-php-idea-12]: http://ok2471oek.bkt.clouddn.com/dqmmpb/blog/2017-02-21/apache2-php7-idea-12.png
 [apache2-php-idea-13]: http://ok2471oek.bkt.clouddn.com/dqmmpb/blog/2017-02-21/apache2-php7-idea-13.png
+[intellij-idea-php]: https://www.jetbrains.com/help/idea/2016.3/php-specific-guidelines.html
 [xdebug-install]: https://xdebug.org/docs/install
+[thx-php7]: https://gold.xitu.io/entry/5668198060b25b0400e838cd
