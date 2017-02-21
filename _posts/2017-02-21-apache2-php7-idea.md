@@ -7,11 +7,13 @@ categories: jekyll update
 
 ## Apache2.4-php7.1环境配置
 
-记得原先机器上有php5.6的开发环境的，但忘记怎么配了。刚好有个php的项目要做，于是从头开始。
+记得原先机器上有php5.6的开发环境的，但忘记怎么配了。刚好有个php的项目要做，于是重新开始搭环境。
 
-但安装apache2的时候各种问题，估计是和原先的apache有冲突，而且原先安装的nginx好像也有问题？于是先全部卸载
+搭环境的过程中遇到过各种问题，估计是和原先的apache有冲突，而且原先安装的nginx好像也有问题？于是先全部卸载
 
 ### 安装apache2.4
+
+#### 卸载旧环境（反正是找到的都删掉了）
 
 ```
 sudo apt-get --purge remove apache2
@@ -41,11 +43,15 @@ sudo rm -rf
 sudo find / -name "*apache*" | xargs sudo rm -rf
 ```
 
+#### 重启后安装
+
 重启后安装apache2
 
 ```
 sudo apt-get install apache2
 ```
+
+终于能够成功启动apache2了
 
 ### 安装php7.1
 
