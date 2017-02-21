@@ -142,7 +142,7 @@ cd /etc/apache2
 sudo cp 000-default.conf phptest.conf
 ```
 
-将虚拟站点的端口改为`8888`，`DocumentRoot`的配置修改为`/var/www/phptest`（phptest为自己的php工程目录，后面将结合IntelliJ Idea的php开发环境搭建来介绍phptest工程）
+将虚拟站点的端口改为`8888`，`DocumentRoot`的配置修改为`/var/www/phptest`（phptest为php项目目录，后面将结合IntelliJ Idea的php开发环境搭建来介绍phptest项目）
 `ErrorLog`和`CustomLog`也修改为自己可用的
 
 ```
@@ -218,9 +218,9 @@ service apache2 restart
 添加PHP7.1的开发黄精，并设置路径，这里在`Debugger`中最初是没有`xdebug`的，`xdebug`的安装参看[安装xdebug](#安装xdebug)。这里保存就好了
 
 
-##### 新建phptest工程
+##### 新建phptest项目
 
-新建php工程
+新建php项目
 
 - 第一步
 
@@ -260,7 +260,14 @@ phpinfo();
 
 ![apache2-php-idea-5][apache2-php-idea-5]
 
-添加apache工程的部署路径
+添加apache项目的部署路径，首先在`/var/www`目录（apache2默认的根目录）下新建目录`phptest`，并讲`phptest`目录的权限设置为可写
+
+```
+sudo mkdir /var/www/phptest
+sudo chmod a+w /var/www/phptest
+```
+
+配置`phptest`项目在apache下部署路径（从`phptest`项目映射到`/var/www/phptest`）
 
 ![apache2-php-idea-6][apache2-php-idea-6]
 
