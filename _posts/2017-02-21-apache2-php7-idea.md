@@ -380,7 +380,7 @@ service apache2 restart
 
 我们有很多方式来确认Xdebug已经正常工作了：
 
- * 在Terminal执行php -m，在输出结果最后的[Zend Modules]部分，可以看到有Xdebug；
+ * 在Terminal执行php -m，在输出结果最后的`Zend Modules`部分，可以看到有Xdebug；
  * 执行php -i | grep xdebug，在输出的结果中，可以看到有xdebug support => enabled；
  * 访问我们之前的`http://localhost:8888/index.php`，可以找到Xdebug的配置
 
