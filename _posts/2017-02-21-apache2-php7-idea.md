@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Apache2.4-php7.1环境配置"
-date:   2017-02-17 17:20:00 +0800
+date:   2017-02-21 17:20:00 +0800
 categories: jekyll update
 ---
 
