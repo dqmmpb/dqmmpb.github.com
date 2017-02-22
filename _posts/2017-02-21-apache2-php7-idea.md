@@ -283,8 +283,7 @@ sudo chmod a+w /var/www/phptest
 
 ![apache2-php-idea-10][apache2-php-idea-10]
 
-注意：`Use path mappings`中最好指定`index.php`的映射路径`/var/www/phptest/index.php`，否则在调试的时候回报路径不匹配的错误
-**至于有没有更好的方式，比如直接配置路径，自动映射到文件夹，暂时还不知道**
+注意：`Use path mappings`中需要指定映射路径，将源码工程映射到`/var/www/phptest`，否则在调试的时候回报路径不匹配的错误
 
 ##### idea启动xdebug调试
 
