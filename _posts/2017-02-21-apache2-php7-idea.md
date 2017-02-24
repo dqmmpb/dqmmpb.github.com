@@ -86,7 +86,7 @@ cd /etc/apache2
 ├── apache2.conf  // 主配置文件
 ├── conf-available  // 可用配置文件
 ├── conf-enabled  // 启用的配置文件
-├── envvars  // 全局半两
+├── envvars  // 全局变量
 ├── magic  // MIME类型
 ├── mods-available  // 可用模块
 ├── mods-enabled  // 启用的模块
