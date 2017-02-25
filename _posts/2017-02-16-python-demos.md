@@ -69,6 +69,15 @@ python的语法比较好懂的。
 
 Python程序的运行请参看[项目源码simple-websocket-server][simple-websocket-server]的[`README.md`][simple-websocket-server-readme]文件中的中文部分
 
+## 后记
+
+檀老板后来又发来消息说，python已经有这模块了，于是…… 好尴尬 囧rz 装了一手好逼……
+
+闲话不说，附上方法
+
+![python-demos-2][python-demos-2]
+
+![python-demos-1][python-demos-1]
 
 
 [javascript-ruanyifeng]: http://javascript.ruanyifeng.com/
@@ -77,3 +86,5 @@ Python程序的运行请参看[项目源码simple-websocket-server][simple-webso
 [simple-websocket-server]: https://github.com/dqmmpb/simple-websocket-server
 [python-tail]: https://github.com/kasun/python-tail
 [simple-websocket-server-readme]: https://github.com/dqmmpb/simple-websocket-server/blob/master/README.md
+[python-demos-1]: http://ok2471oek.bkt.clouddn.com/dqmmpb/blog/2017-02-16/python-demos-1.jpg
+[python-demos-2]: http://ok2471oek.bkt.clouddn.com/dqmmpb/blog/2017-02-16/python-demos-2.jpg
