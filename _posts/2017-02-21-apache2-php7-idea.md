@@ -61,7 +61,7 @@ sudo apt-get install php7.1
 这里可能需要添加ppa源
 
 ```
-add-apt-repository ppa:ondrej/php-7.0
+add-apt-repository ppa:ondrej/php
 ```
 
 ## 配置apache2和php7
