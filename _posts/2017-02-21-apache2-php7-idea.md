@@ -323,7 +323,7 @@ cd xdebug
 phpize
 ```
 
-phpize命令或生成`configure`文件
+phpize命令会生成`configure`文件
 
 ```
 ./configure --enable-xdebug
