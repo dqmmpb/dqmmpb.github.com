@@ -221,7 +221,7 @@ service apache2 restart
 
 ![apache2-php-idea-4][apache2-php-idea-4]
 
-添加PHP7.1的开发黄精，并设置路径，这里在`Debugger`中最初是没有`xdebug`的，`xdebug`的安装参看[安装xdebug](#安装xdebug)。这里保存就好了
+添加PHP7.1的开发环境，并设置路径，这里在`Debugger`中最初是没有`xdebug`的，`xdebug`的安装参看[安装xdebug](#安装xdebug)。这里保存就好了
 
 
 ##### 新建phptest项目
