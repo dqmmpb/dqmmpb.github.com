@@ -16,7 +16,7 @@ categories: jekyll update
   <el-button type="primary"><<返回</el-button>
 </el-form-item>
 ```
-`返回`前面的`<<`导致了`vue`在编译模板时出错，而`idea`上并没有明显的error提示（其实是有，只是我真的没有注意到……），这种弱智的错误导致了2个小时直接废掉了，=_=！  
+`返回`前面的`<<`导致了`vue`在编译模板时出错，而`idea`上并没有明显的error提示（其实是有，只是我真的没有注意到……），这种弱智的错误导致2个小时直接废掉了，=_=！  
 特此记下，警示！！！
 
 [element]: http://element.eleme.io/#/zh-CN
