@@ -46,6 +46,7 @@ Postman有native app版本，也有chrome的插件版。Postman的scripts运行�
 
 ***Pre-request Scripts***
 ```javascript
+
 var md5Password = CryptoJS.MD5("123").toString().toUpperCase();
 console.log(md5Password);
 var te = [1, 2, 3, 4];
@@ -80,6 +81,14 @@ pm.sendRequest({
         RSAKey.prototype.getPEM = function(key, pemHeader) {
           return hextopem(b64nltohex(key), pemHeader);
         };
+
+        RSAKey.prototype.encryptB64 = function (text) {
+          return hextob64(this.encrypt(text));
+        };
+        
+        RSAKey.prototype.decryptB64 = function (text) {
+          return this.decrypt(b64tohex(text));
+        };
         
         RSAKey.prototype.getPrivateBaseKey = function () {
           var keyPem = KEYUTIL.getPEM(this, "PKCS8PRV");
@@ -136,7 +145,7 @@ pm.sendRequest({
             } else {
               rsa.readPKCS8PrvKeyFromB64(key);
             }
-            var encrypted = hextob64(rsa.encrypt(text));
+            var encrypted = rsa.encryptB64(text);
             
             return encrypted;
         }
@@ -156,7 +165,7 @@ pm.sendRequest({
             } else {
               rsa.readPKCS8PrvKeyFromB64(key);
             }
-            var decrypted = rsa.decrypt(b64tohex(text));
+            var decrypted = rsa.decryptB64(text);
             
             return decrypted;
         }
@@ -176,7 +185,6 @@ pm.sendRequest({
     });  
     
 });
-
 ```
 
 ***Tests Scripts***
@@ -205,6 +213,14 @@ pm.test("response is ok", function () {
           return hextopem(b64nltohex(key), pemHeader);
         };
         
+        RSAKey.prototype.encryptB64 = function (text) {
+          return hextob64(this.encrypt(text));
+        };
+        
+        RSAKey.prototype.decryptB64 = function (text) {
+          return this.decrypt(b64tohex(text));
+        };
+        
         RSAKey.prototype.getPrivateBaseKey = function () {
           var keyPem = KEYUTIL.getPEM(this, "PKCS8PRV");
           return pemtohex(keyPem);
@@ -260,7 +276,7 @@ pm.test("response is ok", function () {
             } else {
               rsa.readPKCS8PrvKeyFromB64(key);
             }
-            var encrypted = hextob64(rsa.encrypt(text));
+            var encrypted = rsa.encryptB64(text);
             
             return encrypted;
         }
@@ -280,7 +296,7 @@ pm.test("response is ok", function () {
             } else {
               rsa.readPKCS8PrvKeyFromB64(key);
             }
-            var decrypted = rsa.decrypt(b64tohex(text));
+            var decrypted = rsa.decryptB64(text);
             
             return decrypted;
         }
