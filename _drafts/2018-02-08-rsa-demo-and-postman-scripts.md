@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "RSA Demo & Postman Scrpits.md"
+title:  "RSA Demo & Postman Scrpits"
 date:   2018-02-08 17:20:00 +0800
 categories: jekyll update
 ---
