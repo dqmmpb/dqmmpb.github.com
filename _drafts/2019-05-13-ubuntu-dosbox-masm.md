@@ -76,6 +76,7 @@ C:
 ### 安装vim for dos
 
 下载地址(https://www.vim.org/download.php#pc) vim73_46d32.zip  (https://www.dosbox.com/wiki/Software:Vim)
+
 解压到C:盘路径VIM73，解压CWSDPMI，运行VIM前执行CWSDPMI.EXE
 
 ps: vim for dos并不好用，推荐还是在ubuntu下使用vim编辑asm文件，在通过Ctrl+F4快捷键刷新dosbox目录（同步mount的目录）
@@ -100,7 +101,10 @@ C:
 CWSDPMI.EXE
 ```
 
-编写asm程序
+### 编写asm程序
+
+#### 源码
+
 ```
 mkdir TEST
 VIM TEST/hello.asm
@@ -125,16 +129,16 @@ CODE ENDS
 END START
 ```
 
-编译&运行
+#### 编译&运行
 
 ```
 MASM hello.asm
 LINK hello.obj
 hello.exe
 ```
-ps: 被网上代码坑了
+ps:
 
-错误代码：网上代码`MOV AX,4CH`用于Exit，但结果导致exe程序无法返回dos，一度认为是ubuntu下安装的dosbox或masm有问题导致的。
+错误代码：网上代码`MOV AX,4CH`用于Exit，但结果却是exe程序无法返回dos，一度认为是ubuntu下安装的dosbox或masm有问题导致的。
 正确代码：`MOV AH,4CH`，参看（https://www.csc.depauw.edu/~bhoward/asmtut/asmtut12.html ）
 
 ### 安装debugx
