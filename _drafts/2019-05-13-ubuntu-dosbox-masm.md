@@ -121,8 +121,9 @@ START:
 	MOV AX,DATA
 	MOV DS,AX
 	LEA DX,HELLO
-	MOV AH,09H
+	MOV AH,9H
 	INT 21H
+	MOV AL,0H
 	MOV AH,4CH
 	INT 21H
 CODE ENDS
@@ -140,7 +141,7 @@ ps:
 
 错误代码：网上代码`MOV AX,4CH`用于Exit，但结果却是exe程序无法返回dos，一度认为是ubuntu下安装的dosbox或masm有问题导致的。
 
-正确代码：`MOV AH,4CH`，参看（https://www.csc.depauw.edu/~bhoward/asmtut/asmtut12.html ）
+正确代码：`MOV AH,4CH`，参看（https://www.csc.depauw.edu/~bhoward/asmtut/asmtut12.html ）或者`MOV AX,4C00H`,建议单独设置`AH`和`AL`.如果不关心`AL`的值,`MOV AL,0H`可省略
 
 ### 安装debugx
 
@@ -163,10 +164,10 @@ CWSDPMI.EXE
 
 #### 调试
 
-执行`debug.com`
+执行`debug`或`debug.com`
 
 ```
-debug.com HELLO.EXE
+debug HELLO.EXE
 -u
 ```
 
@@ -189,3 +190,23 @@ q 退出DEBUG，回到DOS状态。
 https://thestarman.pcministry.com/asm/debug/DOSstub.htm
 
 https://bingyishow.top/Technical-article/54.html
+
+
+#### dosbox常用快捷键
+
+```
+Alt+Enter       //切换全屏
+Alt+Pause       //暂停模拟
+Ctrl+F1         //改变键盘映射
+Ctrl+Alt+F5     //开始/停止录制视频
+Ctrl+F4         //交换挂载的磁盘映像，也就是更新磁盘文件
+Ctrl+F5         //截图
+Ctrl+F6         //开始/停止录制声音
+Ctrl+F7         //减少跳帧
+Ctrl+F8         //增加跳帧
+Ctrl+F9         //关闭DOSBOX
+Ctrl+F10        //捕捉/释放鼠标
+Ctrl+F11        //模拟减速
+Ctrl+F12        //加速模拟
+Alt+F12         //不锁定速度
+```
