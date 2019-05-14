@@ -144,6 +144,8 @@ ps:
 
 ### 安装debugx
 
+#### 安装
+
 安装debugx进行调试（https://thestarman.pcministry.com/asm/debug/debug.htm ） ，下载（https://sites.google.com/site/pcdosretro/enhdebug ） 最后链接下载
 
 解压到C:盘目录DEBUGX， 修改dosbox的配置文件，添加环境变量
@@ -159,6 +161,8 @@ C:
 CWSDPMI.EXE
 ```
 
+#### 调试
+
 执行`debug.com`
 
 ```
@@ -166,14 +170,19 @@ debug.com HELLO.EXE
 -u
 ```
 
-debugx相关命令：（https://sites.google.com/site/pcdosretro/enhdebug ）
-
-中文参考资料：（https://bingyishow.top/Technical-article/54.html ）
+### debugx相关命令
 
 常用命令
 ```
 u 对机器代码反汇编显示
 r 观看和修改寄存器的值。
-d 显示内存区域的内容。 `d 0000` 其中0000为内存地址起始位置
+d 显示内存区域的内容。 如：`d 0000` 其中0000为内存地址起始位置
 q 退出DEBUG，回到DOS状态。 
 ```
+更多命令参看（https://sites.google.com/site/pcdosretro/enhdebug ）
+
+### 其他参考资料
+
+https://thestarman.pcministry.com/asm/debug/DOSstub.htm
+
+https://bingyishow.top/Technical-article/54.html
