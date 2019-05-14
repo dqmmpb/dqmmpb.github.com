@@ -166,9 +166,9 @@ debug.com HELLO.EXE
 -u
 ```
 
-debugx相关命令
-（https://sites.google.com/site/pcdosretro/enhdebug ）
-（https://bingyishow.top/Technical-article/54.html ）
+debugx相关命令：（https://sites.google.com/site/pcdosretro/enhdebug ）
+
+中文参考资料：（https://bingyishow.top/Technical-article/54.html ）
 
 常用命令
 ```
