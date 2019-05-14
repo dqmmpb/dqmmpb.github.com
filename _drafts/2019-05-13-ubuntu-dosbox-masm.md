@@ -62,7 +62,7 @@ SETUP.EXE
 安装完成后，修改dosbox的配置文件
 
 ```
-vim dosbox-0.74.conf
+vim .dosbox/dosbox-0.74.conf
 ```
 
 在尾部添加如下内容，保存退出，重启dosbox
@@ -90,7 +90,7 @@ VIM.EXE
 修改dosbox的配置文件
 
 ```
-vim dosbox-0.74.conf
+vim .dosbox/dosbox-0.74.conf
 ```
 
 在尾部添加如下内容(VIM运行前必须先运行CWSDPMI.EXE，通过dosbox配置文件执行)，保存退出，重启dosbox
@@ -139,6 +139,7 @@ hello.exe
 ps:
 
 错误代码：网上代码`MOV AX,4CH`用于Exit，但结果却是exe程序无法返回dos，一度认为是ubuntu下安装的dosbox或masm有问题导致的。
+
 正确代码：`MOV AH,4CH`，参看（https://www.csc.depauw.edu/~bhoward/asmtut/asmtut12.html ）
 
 ### 安装debugx
@@ -148,7 +149,7 @@ ps:
 解压到C:盘目录DEBUGX， 修改dosbox的配置文件，添加环境变量
 
 ```
-vim dosbox-0.74.conf
+vim .dosbox/dosbox-0.74.conf
 ```
 添加
 ```
