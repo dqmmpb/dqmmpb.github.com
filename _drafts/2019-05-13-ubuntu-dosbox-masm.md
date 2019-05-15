@@ -112,22 +112,23 @@ VIM TEST/hello.asm
 
 ```asm
 DATA SEGMENT
-HELLO DB "Hello World!$"
+        HELLO DB "Hello World!$"
 DATA ENDS
 
 CODE SEGMENT
-	ASSUME CS:CODE,DS:DATA
+        ASSUME CS:CODE,DS:DATA
 START:
-	MOV AX,DATA
-	MOV DS,AX
-	LEA DX,HELLO
-	MOV AH,9H
-	INT 21H
-	MOV AL,0H
-	MOV AH,4CH
-	INT 21H
+        MOV AX,DATA
+        MOV DS,AX
+        LEA DX,HELLO
+        MOV AH,9H  ; Output a string
+        INT 21H
+        MOV AL,0H  ; 0 for normal exit, non-zero for error
+        MOV AH,4CH ; Exit
+        INT 21H
 CODE ENDS
 END START
+
 ```
 
 #### 编译&运行
@@ -139,9 +140,9 @@ hello.exe
 ```
 ps:
 
-错误代码：网上代码`MOV AX,4CH`用于Exit，但结果却是exe程序无法返回dos，一度认为是ubuntu下安装的dosbox或masm有问题导致的。
+错误代码：网上代码`MOV AX, 4CH`用于Exit，但结果却是exe程序无法返回dos，一度认为是ubuntu下安装的dosbox或masm有问题导致的。
 
-正确代码：`MOV AH,4CH`，参看（https://www.csc.depauw.edu/~bhoward/asmtut/asmtut12.html ）或者`MOV AX,4C00H`,建议单独设置`AH`和`AL`.如果不关心`AL`的值,`MOV AL,0H`可省略
+正确代码：`MOV AH, 4CH`，参看（https://www.csc.depauw.edu/~bhoward/asmtut/asmtut12.html ）或者`MOV AX,4C00H`,建议单独设置`AH`和`AL`.如果不关心`AL`的值,`MOV AL,0H`可省略
 
 ### 安装debugx
 
@@ -209,4 +210,21 @@ Ctrl+F10        //捕捉/释放鼠标
 Ctrl+F11        //模拟减速
 Ctrl+F12        //加速模拟
 Alt+F12         //不锁定速度
+```
+
+#### 使用FreeDos编辑器
+
+下载：https://archive.org/details/freedos_edit_09a_
+
+解压到C:盘目录EDIT， 修改dosbox的配置文件，添加环境变量
+
+```
+vim .dosbox/dosbox-0.74.conf
+```
+添加
+```
+mount C: ~/Software/masm
+PATH=%PATH%;C:/MASM611/BIN;C:/MASM611/BINR;C:/VIM73;C:/VIM73/CSDPMI4B/BIN;C:/DEBUGX;C:/EDIT
+C:
+CWSDPMI.EXE
 ```
