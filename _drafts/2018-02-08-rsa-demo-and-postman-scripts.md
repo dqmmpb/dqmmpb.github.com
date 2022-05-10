@@ -42,7 +42,7 @@ Postman有native app版本，也有chrome的插件版。Postman的scripts运行�
 
 注：代码同时提供了对lodash和CryptoJS的使用。
 在Postman的native下，lodash需要使用require方式引入，而jquery已经不提倡使用了，至少我还没有找到合适的方式把jquery引入，因为eval方式报错了；
-但在Postman的chrome app下（已经不提倡使用插件版本的Postman了），lodash以`_`方式提供，已在window对象下，无需手动引入。而和jquery也`$`的方式在window对象下存在，也无需手动引入。
+但在Postman的chrome app下（已经不提倡使用插件版本的Postman了），lodash以`_`方式提供，已在window对象下，无需手动引入。而和jquery也以`$`的方式在window对象下存在，同样无需手动引入。
 
 ***Pre-request Scripts***
 ```javascript
