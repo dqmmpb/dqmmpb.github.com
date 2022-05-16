@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Helm(01)"
+title:  "Helm & Chart"
 date:   2022-05-10 09:00:00 +0800
 categories: jekyll update
 ---
