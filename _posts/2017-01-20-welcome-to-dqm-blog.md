@@ -299,9 +299,9 @@ transformedStyles.stylesheet.rules.map(function(rule, ruleIndex) {
 从今天开始...
 
 
-[su]: http://ok2471oek.bkt.clouddn.com/dqmmpb/blog/2017-01-20/su.png
+[su]: http://qiniu.dqmmpb.com/dqmmpb/blog/2017-01-20/su.png
 [ziiiro]: https://shop290442649.taobao.com/?spm=a1z10.1-c.0.0.BLAlIj
-[ziiiro-show]: http://ok2471oek.bkt.clouddn.com/dqmmpb/blog/2017-01-20/ziiiro.jpg
+[ziiiro-show]: http://qiniu.dqmmpb.com/dqmmpb/blog/2017-01-20/ziiiro.jpg
 [doyoe]: http://blog.doyoe.com/
 [css]: http://css.doyoe.com/
 [gulp-css-spriter]: https://github.com/MadLittleMods/gulp-css-spriter

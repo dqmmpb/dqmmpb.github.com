@@ -18,7 +18,7 @@ RSA Demo没什么好说的，这里其实重点是想说一下Postman提供的Sc
 Postman提供了Scripts脚本，用来在request提交前和提交后对request和response进行处理
 
 - Pre-request Scripts: 提交前对request进行处理，详细的描述可参看[Pre-request Scripts](https://www.getpostman.com/docs/postman/scripts/pre_request_scripts)
-- Tests Scripts: 结果返回后对response进行处理，主要用来进行test测试，纤细的描述可参看[Tests Scripts](https://www.getpostman.com/docs/postman/scripts/test_scripts)
+- Tests Scripts: 结果返回后对response进行处理，主要用来进行test测试，详细的描述可参看[Tests Scripts](https://www.getpostman.com/docs/postman/scripts/test_scripts)
 
 本次结合RSA的Demo，使用Postman来进行接口测试。
 

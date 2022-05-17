@@ -14,7 +14,7 @@ categories: jekyll update
 
 安装和破解过程参考[IntelliJ IDEA Multi-MarkDown插件安装破J全过程][idea-multimarkdown]
 
-安装包可从从github项目[idea-multimarkdown][idea-multimarkdown-github]的`dist`下载。也可以通过插件的方式直接安装
+安装包可从github项目[idea-multimarkdown][idea-multimarkdown-github]的`dist`下载。也可以通过插件的方式直接安装
 
 ### 破解
 
@@ -82,7 +82,7 @@ sudo apt-get install shutter
 [idea-multimarkdown]: http://www.jianshu.com/p/a0550f81cbd1
 [idea-multimarkdown-github]: https://github.com/vsch/idea-multimarkdown
 [idea-multimarkdown-github-dqmmpb]: https://github.com/dqmmpb/idea-multimarkdown
-[idea-multimarkdown-screenshot]: http://ok2471oek.bkt.clouddn.com/dqmmpb/blog/2017-02-17/idea-multimarkdown.png
-[idea-multimarkdown-modules]: http://ok2471oek.bkt.clouddn.com/dqmmpb/blog/2017-01-20/idea-multimarkdown-modules.png
-[idea-multimarkdown-lib1]: http://ok2471oek.bkt.clouddn.com/dqmmpb/blog/2017-01-20/idea-multimarkdown-lib1.png
-[idea-multimarkdown-lib2]: http://ok2471oek.bkt.clouddn.com/dqmmpb/blog/2017-01-20/idea-multimarkdown-lib2.png
+[idea-multimarkdown-screenshot]: http://qiniu.dqmmpb.com/dqmmpb/blog/2017-02-17/idea-multimarkdown.png
+[idea-multimarkdown-modules]: http://qiniu.dqmmpb.com/dqmmpb/blog/2017-01-20/idea-multimarkdown-modules.png
+[idea-multimarkdown-lib1]: http://qiniu.dqmmpb.com/dqmmpb/blog/2017-01-20/idea-multimarkdown-lib1.png
+[idea-multimarkdown-lib2]: http://qiniu.dqmmpb.com/dqmmpb/blog/2017-01-20/idea-multimarkdown-lib2.png

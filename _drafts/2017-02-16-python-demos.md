@@ -86,5 +86,5 @@ Python程序的运行请参看[项目源码simple-websocket-server][simple-webso
 [simple-websocket-server]: https://github.com/dqmmpb/simple-websocket-server
 [python-tail]: https://github.com/kasun/python-tail
 [simple-websocket-server-readme]: https://github.com/dqmmpb/simple-websocket-server/blob/master/README.md
-[python-demos-1]: http://ok2471oek.bkt.clouddn.com/dqmmpb/blog/2017-02-16/python-demos-1.jpg
-[python-demos-2]: http://ok2471oek.bkt.clouddn.com/dqmmpb/blog/2017-02-16/python-demos-2.jpg
+[python-demos-1]: http://qiniu.dqmmpb.com/dqmmpb/blog/2017-02-16/python-demos-1.jpg
+[python-demos-2]: http://qiniu.dqmmpb.com/dqmmpb/blog/2017-02-16/python-demos-2.jpg
