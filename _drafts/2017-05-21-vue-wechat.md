@@ -30,7 +30,7 @@ No！No！No！！！
 #### 坑1
 
 不要被表象所迷惑，在PC的浏览器上，hash模式显的灰常好，不会有任何问题，当然，在微信中也没发现太多问题。但最重要的坑才出现。我们知道，后台如果想获取用户的openId，是需要走微信授权的，但微信授权对url地址是有要求的，要求`#`之前的作为有效的授权地址。这还是可以接受的，因为授权还是能过的。  
-但分享出去的链接就有问题了，微信会在url中添加自己的参数，于是分享后的url就有可能被微信篡改，如`http://www.emaoli.com/gifts/#/gift/wantToGive?activeCode=ZD521&goodsId=1`就被改为了`http://www.emaoli.com/gifts/?from=wechatxxx#/gift/wantToGive?activeCode=ZD521&goodsId=1`，因为微信认为`#`是作为页内元素存在的。  
+但分享出去的链接就有问题了，微信会在url中添加自己的参数，于是分享后的url就有可能被微信篡改，如`http://www.emaoli.com/gifts/#/gift/wantToGive?activeCode=ZD521&goodsId=1`就被改为了`http://www.emaoli.com/gifts/?from=wechatxxx#/gift/wantToGive?activeCode=ZD521&goodsId=1` ，因为微信认为`#`是作为页内元素存在的。  
 可是，这样的链接仍能正常路由到对应的页面，其实表现层看起来是没啥问题的，但关键的问题**如果该页面在进行分享的话**链接就跪了，导致分享的验签是不成功的。
 
 

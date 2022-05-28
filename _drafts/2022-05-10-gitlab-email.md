@@ -48,6 +48,40 @@ CentOS Linux release 8.2.2004 (Core)
 ➜  ~ rpm -i gitlab-ce-14.10.2-ce.0.el8.x86_64.rpm
 ```
 
+
+
+### root密码
+
+初装以后，密码放在一个临时文件`/etc/gitlab/initial_root_password`中：
+```shell script
+vim /etc/gitlab/initial_root_password
+```
+该文件将在首次执行reconfigure后24小时自动删除，使用这个密码登录后，需要尽快在web页面中进行密码修改。
+
+也可使用如下方式修改root密码
+```shell script
+
+➜  ~ sudo gitlab-rails console
+--------------------------------------------------------------------------------
+ Ruby:         ruby 2.7.5p203 (2021-11-24 revision f69aeb8314) [x86_64-linux]
+ GitLab:       14.10.2 (07d12f3fd11) FOSS
+ GitLab Shell: 13.25.1
+ PostgreSQL:   12.7
+------------------------------------------------------------[ booted in 51.43s ]
+Loading production environment (Rails 6.1.4.7)
+irb(main):001:0> user = User.find_by_username 'root'
+=> #<User id:1 @root>
+irb(main):002:0> user.password = '你的密码'
+=> "你的密码"
+irb(main):003:0> user.password_confirmation = '你的密码'
+=> "你的密码"
+irb(main):004:0> user.save!
+=> true
+irb(main):005:0> exit
+
+```
+
+
 ### 修改Gitlab的IP和端口
 
 Gitlab自带nginx默认监听端口是80，不利于管理其他服务。因此考虑使用独立的nginx监听80端口，调整Gitlab自带nginx监听端口为9999，并将域名gitlab.dqmmpb.com转发给Gitlab自带的nginx
