@@ -32,7 +32,7 @@ categories: jekyll update
 
 ### postgresql判断database是否存在
 
-postgresql没有提供if not exists方式，使用dblink插件判断
+postgresql没有提供database的exists判断，使用dblink扩展
 
 ```postgresql
 CREATE EXTENSION IF NOT EXISTS dblink;
@@ -67,4 +67,6 @@ DROP SCHEMA IF EXISTS test CASCADE;
 
 ### 参考资料
 
-- [kubectl](https://github.com/kubernetes/kubectl)
+- [PostgreSQL官网](https://www.postgresql.org/)
+- [postgresql中文](http://www.postgres.cn/index.php/v2/home)
+- [PostgreSQL 12.2 手册](http://www.postgres.cn/docs/12/)
